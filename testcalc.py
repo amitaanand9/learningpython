@@ -9,6 +9,14 @@ def nchoosek(n,k):
     ans = kperm(n,k) / kfact
     return(ans)
 
-#print(nchoosek(75,5)*15)
-#answer = math.factorial(20) / ((math.factorial(3)-1) * (math.factorial(10)-1) * (math.factorial(7)-1))
-print(nchoosek(3,0))
+def bernoulitrials(n, k, p):
+    ans = 0
+    i=k
+    for i in range(n):
+        ans = ans + (nchoosek(n,i) * p**i * (1-p)**(n-i))
+    return ans
+
+print(nchoosek(4,3))
+print(nchoosek(5,4))
+print(nchoosek(6,4))
+print(nchoosek(7,4))
