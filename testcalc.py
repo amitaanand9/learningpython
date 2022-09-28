@@ -16,7 +16,11 @@ def bernoulitrials(n, k, p):
         ans = ans + (nchoosek(n,i) * p**i * (1-p)**(n-i))
     return ans
 
-print(nchoosek(4,3))
-print(nchoosek(5,4))
-print(nchoosek(6,4))
-print(nchoosek(7,4))
+sum=0
+for k in range(1, 250):
+    sum = sum + 0.02* k
+
+
+print(250 * 249 *248*246*247 * 0.02**5)
+print(0.98**245)
+
